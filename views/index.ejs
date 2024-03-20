@@ -1,0 +1,1616 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>Flow Zone Tracker</title>
+	<!-- add icon link -->
+	<link rel="icon" href="./assets/img/icon/icon.png" type="image/x-icon">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<meta name="description"
+		content="The Flow Zone Tracker, COACH JYIMA, CERTIFIED PERSONAL TRAINER/HOLISTIC HEALTH COACH" />
+	<meta name="keywords"
+		content="Coach, Jyima, certified, personal trainer, holistic coach, health coach, flow zone tracker, daily check in" />
+	<meta name="author" content="JYIMA" />
+
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<!-- <link rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.css"> -->
+	<link rel="stylesheet" href="assets/css/bootstrap-datepicker.css">
+	<link rel="stylesheet" href="assets/css/animate.min.css">
+	<link rel="stylesheet" href="assets/css/fontawesome-all.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/colors/switch.css">
+	<!-- Color Alternatives -->
+	<link href="assets/css/colors/color-2.css" rel="alternate stylesheet" type="text/css" title="color-2">
+	<link href="assets/css/colors/color-3.css" rel="alternate stylesheet" type="text/css" title="color-3">
+	<link href="assets/css/colors/color-4.css" rel="alternate stylesheet" type="text/css" title="color-4">
+	<link href="assets/css/colors/color-5.css" rel="alternate stylesheet" type="text/css" title="color-5">
+</head>
+
+<body>
+	<!-- This code is use for color chooser, you can delete -->
+	<div id="switch-color" class="color-switcher" hidden>
+		<div class="open">
+			<i class="fas fa-cog"></i>
+		</div>
+		<h4>COLOR OPTION</h4>
+		<ul>
+			<li>
+				<a class="color-2" onclick="setActiveStyleSheet('color-2'); return false;" href="#">
+					<i class="fas fa-cog"></i>
+				</a>
+			</li>
+			<li>
+				<a class="color-3" onclick="setActiveStyleSheet('color-3'); return false;" href="#">
+					<i class="fas fa-cog"></i>
+				</a>
+			</li>
+			<li>
+				<a class="color-4" onclick="setActiveStyleSheet('color-4'); return false;" href="#">
+					<i class="fas fa-cog"></i>
+				</a>
+			</li>
+			<li>
+				<a class="color-5" onclick="setActiveStyleSheet('color-5'); return false;" href="#">
+					<i class="fas fa-cog"></i>
+				</a>
+			</li>
+		</ul>
+	</div>
+	<div class="clearfix"></div>
+	<div class="wrapper">
+		<div class="steps-area-fixed">
+			<div class="sidebar-inner">
+				<div class="sidebar-br">
+					<div class="sidebar-inner-content" id="image-1">
+						<img src="assets/img/side-img-r.jpg" alt="">
+					</div>
+					<div class="sidebar-inner-content" id="image-2">
+						<img src="assets/img/side-img-r.jpg" alt="">
+					</div>
+					<div class="sidebar-inner-content image-holder">
+						<img src="assets/img/side-img.jpg" alt="">
+					</div>
+					<p class="sidebar-inner-content">
+						The flow zone is the optimal space for your body to perform its best.
+					</p>
+					<p class="sidebar-inner-content">
+						This is the zone where you burn the most fat, build the most muscle, decrease stress and
+						increase immunity.
+					</p>
+					<p class="sidebar-inner-content copyright">
+						Copyright © 2024 Jyima. All Rights Reserved.
+					</p>
+				</div>
+			</div>
+			<div style="position: absolute; width: 100%; top: 0;">
+				<div class="logo">
+					<img src="./assets/img/logo/logo.png">
+				</div>
+				<div id="sidebar-heading-div">
+					<h2 id="sidebar-heading">DAILY CHECK IN</h2>
+				</div>
+			</div>
+			<div class="history">
+				<div class="history-icon">
+					<i class="fa fa-history" aria-hidden="true" id="viewHistoryButton" title="View History"></i>
+				</div>
+			</div>
+		</div>
+		<form class="multisteps-form__form" action="#" id="wizard" method="POST">
+			<div class="form-area position-relative">
+				<!-- div 1 -->
+				<div class="multisteps-form__panel div-1 js-active" data-animation="slideHorz">
+					<div class="wizard-forms">
+						<div class="inner pb-100 clearfix">
+							<div class="form-content pera-content">
+								<div class="step-inner-content">
+									<span class="step-no" style="font-size: 20px;">Complete your Infomation</span>
+									<h2>Personal Info 1</h2>
+									<p>Enter your personal information.</p>
+									<div class="step-box">
+										<div class="form-inner-area">
+											<div class="row">
+												<div class="line-edit col-md-8">
+													<p class="line-edit-label">First and last name:</p>
+													<input type="text" name="full_name" id="nameText"
+														class="form-control col-md-8 required" minlength="2"
+														placeholder="First and last name *">
+												</div>
+												<div class="line-edit col-md-4">
+													<p class="line-edit-label">Age:</p>
+													<input type="number" name="age_number" id="ageNumber"
+														class="form-control col-md-4 required" minlength="1"
+														placeholder="Age *">
+												</div>
+												<div class="line-edit step-content-field col-md-6">
+													<p class="line-edit-label">Date of Birth:</p>
+													<div class="date-picker date datepicker">
+														<input type="text" class="form-control" name="birthDate"
+															id="birthDate">
+														<div class="input-group-append">
+															<span class="input-group-text" hidden>PICK DATE</span>
+														</div>
+													</div>
+												</div>
+												<div class="line-edit step-content-field col-md-6">
+													<p class="line-edit-label">Today's Date:</p>
+													<div class="date-picker date datepicker">
+														<input type="text" name="todayDate" id="todayDate"
+															value="2024-01-31" class="form-control">
+														<div class="input-group-append">
+															<span class="input-group-text" hidden>PICK DATE</span>
+														</div>
+													</div>
+												</div>
+												<div class="line-edit language-select col-md-6">
+													<p class="line-edit-label">Gender at Birth:</p>
+													<select name="genderAtBirth_select" id="genderAtBirthSelect">
+														<option>Male</option>
+														<option>Female</option>
+														<option>Gender-Neutral</option>
+													</select>
+												</div>
+												<div class="line-edit language-select col-md-6">
+													<p class="line-edit-label">Current Gender:</p>
+													<select name="currentGender_select" id="currentGenderSelect">
+														<option>Male</option>
+														<option>Female</option>
+														<option>Gender-Neutral</option>
+													</select>
+												</div>
+												<div class="line-edit step-content-field language-select">
+													<p class="line-edit-label">Ethnicity:</p>
+													<select name="ethnicity" id="ethnicityText">
+														<option>-- Select --</option>
+														<option>African</option>
+														<option>Caribbean</option>
+														<option>Indian</option>
+														<option>Melanesian</option>
+														<option>Australasian/Aboriginal</option>
+														<option>Chinese</option>
+														<option>Guamanian</option>
+														<option>Japanese</option>
+														<option>Korean</option>
+														<option>Polynesian</option>
+														<option>European/Anglo Saxon</option>
+														<option>Other Pacific Islander</option>
+														<option>Latin American</option>
+														<option>Arabic</option>
+														<option>Vietnamese</option>
+														<option>Micronesian</option>
+														<option>Declined to Respond</option>
+														<option>Other Hispanic</option>
+														<option>US or Canadian Indian</option>
+														<option>Other Asian</option>
+														<option>Puerto Rican</option>
+														<option>Filipino</option>
+														<option>Mexican</option>
+														<option>Alaskan Native</option>
+														<option>Cuban</option>
+													</select>
+												</div>
+												<div class="line-edit step-content-field">
+													<p class="line-edit-label">Birthplace:</p>
+													<input type="text" name="birthplace_string" class="form-control"
+														id="birthplaceText" placeholder="Birthplace">
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- /.inner -->
+					<div class="actions">
+						<ul>
+							<li class="disable" aria-disabled="true">
+								<span class="js-btn-prev" title="BACK">
+									<i class="fa fa-arrow-left"></i> BACK
+								</span>
+							</li>
+							<li>
+								<span class="js-btn-next" title="NEXT">NEXT
+									<i class="fa fa-arrow-right"></i>
+								</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- div 2 -->
+				<div class="multisteps-form__panel div-2" data-animation="slideHorz">
+					<div class="wizard-forms">
+						<div class="inner pb-100 clearfix">
+							<div class="form-content pera-content">
+								<div class="step-inner-content">
+									<span class="step-no" style="font-size: 20px;">Complete your Infomation</span>
+									<h2>Personal Info 2</h2>
+									<p>Enter your personal information.</p>
+									<div class="step-box">
+										<div class="form-inner-area">
+											<div class="row">
+												<div class="line-edit col-md-6">
+													<p class="line-edit-label">Height (Inches):</p>
+													<input type="number" name="height_number" id="heightnumber"
+														class="form-control col-md-8" minlength="2"
+														placeholder="Height">
+												</div>
+												<div class="line-edit col-md-6">
+													<p class="line-edit-label">Weight (Pounds):</p>
+													<input type="number" name="weight_number" id="weightnumber"
+														class="form-control col-md-4" minlength="1"
+														placeholder="Weight">
+												</div>
+												<div class="line-edit language-select step-content-field">
+													<p class="line-edit-label">Current Fitness Level:</p>
+													<select name="fitnessLevelSelect" id="fitnessLevelSelect">
+														<option value="Beginner">Beginner</option>
+														<option value="Intermediate">Intermediate</option>
+														<option value="Advanced">Advanced</option>
+													</select>
+												</div>
+												<div class="line-edit language-select step-content-field">
+													<p class="line-edit-label">Overall Stress Level:</p>
+													<select name="stressLevelSelect" id="stressLevelSelect">
+														<option value="-1- “Feel Amazing”">-1- “Feel Amazing”</option>
+														<option value="-2- “Feel Good”">-2- “Feel Good”</option>
+														<option value="-3- “Feel a Bit Stressed”">-3- “Feel a Bit
+															Stressed”</option>
+														<option value="-4- “Don't Feel Good, Bothered/Aggravated”">
+															-4- “Don't Feel Good,
+															Bothered/Aggravated”
+														</option>
+														<option value="-5- “Super Stressed/Want to Scream or Cry”">
+															-5- “Super Stressed/Want to Scream
+															or Cry”
+														</option>
+													</select>
+												</div>
+												<div class="budget-area line-edit step-content-field">
+													<p class="line-edit-label">What are your favorite kind of workouts?
+													</p>
+													<div class="opti-list">
+														<ul class="d-flex">
+															<li class="bg-white" style="width: 100%; margin-top: 26px;"
+																id="workout-0">
+																<input type="checkbox" name="code_opti1"
+																	value="Strength Training/Lifting">Strength
+																Training/Lifting
+															</li>
+														</ul>
+													</div>
+													<div class="opti-list">
+														<ul class="d-flex">
+															<li class="bg-white" id="workout-1">
+																<input type="checkbox" name="code_opti1"
+																	value="Cardio Indoors">Cardio Indoors
+															</li>
+															<li class="bg-white" id="workout-2">
+																<input type="checkbox" name="code_opti1"
+																	value="Cardio Outdoors">Cardio Outdoors
+															</li>
+														</ul>
+													</div>
+													<div class="opti-list">
+														<ul class="d-flex">
+															<li class="bg-white" id="workout-3">
+																<input type="checkbox" name="code_opti1"
+																	value="Swimming">Swimming
+															</li>
+															<li class="bg-white" id="workout-4">
+																<input type="checkbox" name="code_opti1"
+																	value="HIT Classes">HIT Classes
+															</li>
+														</ul>
+													</div>
+													<div class="opti-list">
+														<ul class="d-flex">
+															<li class="bg-white" id="workout-5">
+																<input type="checkbox" name="code_opti1"
+																	value="Pilates">Pilates
+															</li>
+															<li class="bg-white" id="workout-6">
+																<input type="checkbox" name="code_opti1"
+																	value="Yoga">Yoga
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- /.inner -->
+						<div class="actions">
+							<ul>
+								<li>
+									<span class="js-btn-prev" title="BACK">
+										<i class="fa fa-arrow-left"></i> BACK
+									</span>
+								</li>
+								<li>
+									<span class="js-btn-next" title="NEXT">NEXT
+										<i class="fa fa-arrow-right"></i>
+									</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<!-- step 1 -->
+				<div class="multisteps-form__panel" data-animation="slideHorz">
+					<div class="wizard-forms">
+						<div class="inner pb-100 clearfix">
+							<div class="form-content pera-content">
+								<div class="step-inner-content">
+									<span class="step-no bottom-line">Flow Check 1</span>
+									<div class="step-progress float-end">
+										<span>1 of 20 completed</span>
+										<div class="step-progress-bar">
+											<div class="progress">
+												<div class="progress-bar" style="width:5%"></div>
+											</div>
+										</div>
+									</div>
+									<h2>Did you workout today? How long?</h2>
+									<div class="services-select-option radio-group-1">
+										<ul>
+											<li class="bg-white active">
+												<label> 10~20 Mins
+													<input type="radio" name="step-1" value="step-1-1" checked />
+												</label>
+											</li>
+											<li class="bg-white">
+												<label> 21~30 Mins
+													<input type="radio" name="step-1" value="step-1-2" />
+												</label>
+											</li>
+											<li class="bg-white">
+												<label> 31~45 Mins
+													<input type="radio" name="step-1" value="step-1-3" />
+												</label>
+											</li>
+											<li class="bg-white">
+												<label> Never
+													<input type="radio" name="step-1" value="step-1-4"
+														id="condition1" />
+												</label>
+											</li>
+										</ul>
+									</div>
+									<div class="conditional" data-condition="#condition1 && step-1 == 'step-1-4'">
+										<h2>If today was a rest day, did you stretch or do a self-care
+											activity (massage, yoga, stretch, walk)?</h2>
+										<div class="services-select-option radio-group-1-s">
+											<ul>
+												<li class="bg-white active">
+													<label> 15 Mins
+														<input type="radio" name="step-1-s" value="step-1s-1" checked />
+													</label>
+												</li>
+												<li class="bg-white">
+													<label> 30 Mins
+														<input type="radio" name="step-1-s" value="step-1s-2" />
+													</label>
+												</li>
+												<li class="bg-white">
+													<label> 45~50 Mins
+														<input type="radio" name="step-1-s" value="step-1s-3" />
+													</label>
+												</li>
+												<li class="bg-white">
+													<label> No
+														<input type="radio" name="step-1-s" value="step-1s-4" />
+													</label>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- ./inner -->
+						<div class="actions">
+							<ul>
+								<li>
+									<span class="js-btn-prev" title="BACK">
+										<i class="fa fa-arrow-left"></i> BACK
+									</span>
+								</li>
+								<li>
+									<span class="js-btn-next" title="NEXT">NEXT
+										<i class="fa fa-arrow-right"></i>
+									</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+
+				<!-- step 2 -->
+				<div class="multisteps-form__panel" data-animation="slideHorz">
+					<div class="wizard-forms">
+						<div class="inner pb-100 clearfix">
+							<div class="form-content pera-content">
+								<div class="step-inner-content">
+									<span class="step-no bottom-line">Flow Check 2</span>
+									<div class="step-progress float-end">
+										<span>2 of 20 completed</span>
+										<div class="step-progress-bar">
+											<div class="progress">
+												<div class="progress-bar" style="width:10%"></div>
+											</div>
+										</div>
+									</div>
+									<h2>Did you stretch before the workout? Which body parts?</h2>
+									<div class="services-select-option radio-group-2">
+										<ul>
+											<li class="bg-white active">
+												<label> No
+													<input type="radio" name="step-2" value="step-2-1" checked>
+												</label>
+											</li>
+
+											<li class="bg-white">
+												<label> 2 body parts
+													<input type="radio" name="step-2" value="step-2-2">
+												</label>
+											</li>
+
+											<li class="bg-white">
+												<label> 4 body parts
+													<input type="radio" name="step-2" value="step-2-3">
+												</label>
+											</li>
+
+											<li class="bg-white">
+												<label> Whole body
+													<input type="radio" name="step-2" value="step-2-4">
+												</label>
+											</li>
+
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- ./inner -->
+						<div class="actions">
+							<ul>
+								<li>
+									<span class="js-btn-prev" title="BACK">
+										<i class="fa fa-arrow-left"></i> BACK
+									</span>
+								</li>
+								<li>
+									<span class="js-btn-next" title="NEXT">NEXT
+										<i class="fa fa-arrow-right"></i>
+									</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<!-- step 3 -->
+				<div class="multisteps-form__panel" data-animation="slideHorz">
+					<div class="wizard-forms">
+						<div class="inner pb-100 clearfix">
+							<div class="form-content pera-content">
+								<div class="step-inner-content">
+									<span class="step-no bottom-line">Flow Check 3</span>
+									<div class="step-progress float-end">
+										<span>3 of 20 completed</span>
+										<div class="step-progress-bar">
+											<div class="progress">
+												<div class="progress-bar" style="width:15%"></div>
+											</div>
+										</div>
+									</div>
+									<h2>How intense was the workout?</h2>
+									<div class="services-select-option radio-group-3">
+										<ul>
+											<li class="bg-white active">
+												<label> Not very intense
+													<input type="radio" name="step-3" value="step-3-1" checked>
+												</label>
+											</li>
+
+											<li class="bg-white">
+												<label> A little intense
+													<input type="radio" name="step-3" value="step-3-2">
+												</label>
+											</li>
+
+											<li class="bg-white">
+												<label> Challenging, but got through it goal
+													<input type="radio" name="step-3" value="step-3-3">
+												</label>
+											</li>
+
+											<li class="bg-white">
+												<label> Very challenging was tough to get through
+													<input type="radio" name="step-3" value="step-3-4">
+												</label>
+											</li>
+
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- ./inner -->
+						<div class="actions">
+							<ul>
+								<li>
+									<span class="js-btn-prev" title="BACK">
+										<i class="fa fa-arrow-left"></i> BACK
+									</span>
+								</li>
+								<li>
+									<span class="js-btn-next" title="NEXT">NEXT
+										<i class="fa fa-arrow-right"></i>
+									</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<!-- step 4 -->
+				<div class="multisteps-form__panel" data-animation="slideHorz">
+					<div class="wizard-forms">
+						<div class="inner pb-100 clearfix">
+							<div class="form-content pera-content">
+								<div class="step-inner-content">
+									<span class="step-no bottom-line">Flow Check 4</span>
+									<div class="step-progress float-end">
+										<span>4 of 20 completed</span>
+										<div class="step-progress-bar">
+											<div class="progress">
+												<div class="progress-bar" style="width:20%"></div>
+											</div>
+										</div>
+									</div>
+									<h2>Did you enjoy the workout?</h2>
+									<div class="services-select-option radio-group-4">
+										<ul>
+											<li class="bg-white active">
+												<label> I didn't really enjoy the workout
+													<input type="radio" name="step-4" value="step-4-1" checked>
+												</label>
+											</li>
+
+											<li class="bg-white">
+												<label> I enjoyed the workout a little
+													<input type="radio" name="step-4" value="step-4-2">
+												</label>
+											</li>
+
+											<li class="bg-white">
+												<label> I really enjoyed the workout one of my favorites
+													<input type="radio" name="step-4" value="step-4-3">
+												</label>
+											</li>
+
+											<li class="bg-white">
+												<label> I enjoyed the workout but not the best
+													<input type="radio" name="step-4" value="step-4-4">
+												</label>
+											</li>
+
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- ./inner -->
+						<div class="actions">
+							<ul>
+								<li>
+									<span class="js-btn-prev" title="BACK">
+										<i class="fa fa-arrow-left"></i> BACK
+									</span>
+								</li>
+								<li>
+									<span class="js-btn-next" title="NEXT">NEXT
+										<i class="fa fa-arrow-right"></i>
+									</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<!-- step 5 -->
+				<div class="multisteps-form__panel" data-animation="slideHorz">
+					<div class="wizard-forms">
+						<div class="inner pb-100 clearfix">
+							<div class="form-content pera-content">
+								<div class="step-inner-content">
+									<span class="step-no bottom-line">Flow Check 5</span>
+									<div class="step-progress float-end">
+										<span>5 of 20 completed</span>
+										<div class="step-progress-bar">
+											<div class="progress">
+												<div class="progress-bar" style="width:25%"></div>
+											</div>
+										</div>
+									</div>
+									<h2>Did you stretch after the workout? Which body parts?</h2>
+									<div class="services-select-option radio-group-5">
+										<ul>
+											<li class="bg-white active">
+												<label> No
+													<input type="radio" name="step-5" value="step-5-1" checked>
+												</label>
+											</li>
+
+											<li class="bg-white">
+												<label> 2 body parts
+													<input type="radio" name="step-5" value="step-5-2">
+												</label>
+											</li>
+
+											<li class="bg-white">
+												<label> 4 body parts
+													<input type="radio" name="step-5" value="step-5-3">
+												</label>
+											</li>
+
+											<li class="bg-white">
+												<label> Whole body
+													<input type="radio" name="step-5" value="step-5-4">
+												</label>
+											</li>
+
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- ./inner -->
+						<div class="actions">
+							<ul>
+								<li>
+									<span class="js-btn-prev" title="BACK">
+										<i class="fa fa-arrow-left"></i> BACK
+									</span>
+								</li>
+								<li>
+									<span class="js-btn-next" title="NEXT">NEXT
+										<i class="fa fa-arrow-right"></i>
+									</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<!-- step 6 -->
+				<div class="multisteps-form__panel" data-animation="slideHorz">
+					<div class="wizard-forms">
+						<div class="inner pb-100 clearfix">
+							<div class="form-content pera-content">
+								<div class="step-inner-content">
+									<span class="step-no bottom-line">Flow Check 6</span>
+									<div class="step-progress float-end">
+										<span>6 of 20 completed</span>
+										<div class="step-progress-bar">
+											<div class="progress">
+												<div class="progress-bar" style="width:30%"></div>
+											</div>
+										</div>
+									</div>
+									<h2>Did you feel full after any of your meals today?</h2>
+									<div class="services-select-option radio-group-6">
+										<ul>
+											<li class="bg-white active">
+												<label> Yes
+													<input type="radio" name="step-6" value="step-6-1" checked>
+												</label>
+											</li>
+
+											<li class="bg-white">
+												<label> No
+													<input type="radio" name="step-6" value="step-6-2">
+												</label>
+											</li>
+
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- ./inner -->
+						<div class="actions">
+							<ul>
+								<li>
+									<span class="js-btn-prev" title="BACK">
+										<i class="fa fa-arrow-left"></i> BACK
+									</span>
+								</li>
+								<li>
+									<span class="js-btn-next" title="NEXT">NEXT
+										<i class="fa fa-arrow-right"></i>
+									</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<!-- step 7 -->
+				<div class="multisteps-form__panel" data-animation="slideHorz">
+					<div class="wizard-forms">
+						<div class="inner pb-100 clearfix">
+							<div class="form-content pera-content">
+								<div class="step-inner-content">
+									<span class="step-no bottom-line">Flow Check 7</span>
+									<div class="step-progress float-end">
+										<span>7 of 20 completed</span>
+										<div class="step-progress-bar">
+											<div class="progress">
+												<div class="progress-bar" style="width:35%"></div>
+											</div>
+										</div>
+									</div>
+									<h2>How many meals did you feel full after today?</h2>
+									<div class="services-select-option radio-group-7">
+										<ul>
+											<li class="bg-white active">
+												<label> None
+													<input type="radio" name="step-7" value="step-7-1" checked>
+												</label>
+											</li>
+
+											<li class="bg-white">
+												<label> 1 meal
+													<input type="radio" name="step-7" value="step-7-2">
+												</label>
+											</li>
+
+											<li class="bg-white">
+												<label> 2 meals
+													<input type="radio" name="step-7" value="step-7-3">
+												</label>
+											</li>
+
+											<li class="bg-white">
+												<label> 3 meals
+													<input type="radio" name="step-7" value="step-7-4">
+												</label>
+											</li>
+
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- ./inner -->
+						<div class="actions">
+							<ul>
+								<li>
+									<span class="js-btn-prev" title="BACK">
+										<i class="fa fa-arrow-left"></i> BACK
+									</span>
+								</li>
+								<li>
+									<span class="js-btn-next" title="NEXT">NEXT
+										<i class="fa fa-arrow-right"></i>
+									</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<!-- step 8 -->
+				<div class="multisteps-form__panel" data-animation="slideHorz">
+					<div class="wizard-forms">
+						<div class="inner pb-100 clearfix">
+							<div class="form-content pera-content">
+								<div class="step-inner-content">
+									<span class="step-no bottom-line">Flow Check 8</span>
+									<div class="step-progress float-end">
+										<span>8 of 20 completed</span>
+										<div class="step-progress-bar">
+											<div class="progress">
+												<div class="progress-bar" style="width:40%"></div>
+											</div>
+										</div>
+									</div>
+									<h2>Did you eat any foods that made you feel bloated or sluggish?</h2>
+									<div class="services-select-option radio-group-8">
+										<ul>
+											<li class="bg-white active">
+												<label> Yes
+													<input type="radio" name="step-8" value="step-8-1" checked>
+												</label>
+											</li>
+
+											<li class="bg-white">
+												<label> No
+													<input type="radio" name="step-8" value="step-8-2">
+												</label>
+											</li>
+
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- ./inner -->
+						<div class="actions">
+							<ul>
+								<li>
+									<span class="js-btn-prev" title="BACK">
+										<i class="fa fa-arrow-left"></i> BACK
+									</span>
+								</li>
+								<li>
+									<span class="js-btn-next" title="NEXT">NEXT
+										<i class="fa fa-arrow-right"></i>
+									</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<!-- step 9 -->
+				<div class="multisteps-form__panel" data-animation="slideHorz">
+					<div class="wizard-forms">
+						<div class="inner pb-100 clearfix">
+							<div class="form-content pera-content">
+								<div class="step-inner-content">
+									<span class="step-no bottom-line">Flow Check 9</span>
+									<div class="step-progress float-end">
+										<span>9 of 20 completed</span>
+										<div class="step-progress-bar">
+											<div class="progress">
+												<div class="progress-bar" style="width:45%"></div>
+											</div>
+										</div>
+									</div>
+									<h2>Did you eat any foods that gave you lasting sustained energy?</h2>
+									<div class="services-select-option radio-group-9">
+										<ul>
+											<li class="bg-white active">
+												<label> Yes
+													<input type="radio" name="step-9" value="step-9-1" checked>
+												</label>
+											</li>
+
+											<li class="bg-white">
+												<label> No
+													<input type="radio" name="step-9" value="step-9-2">
+												</label>
+											</li>
+
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- ./inner -->
+						<div class="actions">
+							<ul>
+								<li>
+									<span class="js-btn-prev" title="BACK">
+										<i class="fa fa-arrow-left"></i> BACK
+									</span>
+								</li>
+								<li>
+									<span class="js-btn-next" title="NEXT">NEXT
+										<i class="fa fa-arrow-right"></i>
+									</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<!-- step 10 -->
+				<div class="multisteps-form__panel" data-animation="slideHorz">
+					<div class="wizard-forms">
+						<div class="inner pb-100 clearfix">
+							<div class="form-content pera-content">
+								<div class="step-inner-content">
+									<span class="step-no bottom-line">Flow Check 10</span>
+									<div class="step-progress float-end">
+										<span>10 of 20 completed</span>
+										<div class="step-progress-bar">
+											<div class="progress">
+												<div class="progress-bar" style="width:50%"></div>
+											</div>
+										</div>
+									</div>
+									<h2>Please list the foods that made you feel bloated or sluggish?</h2>
+									<div class="form-inner-area" style="margin-top: 30px;">
+										<input type="text" name="step-10-1" class="form-control"
+											placeholder="Input the food">
+										<input type="text" name="step-10-2" class="form-control"
+											placeholder="Input the food">
+										<input type="text" name="step-10-3" class="form-control"
+											placeholder="Input the food">
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- ./inner -->
+						<div class="actions">
+							<ul>
+								<li>
+									<span class="js-btn-prev" title="BACK">
+										<i class="fa fa-arrow-left"></i> BACK
+									</span>
+								</li>
+								<li>
+									<span class="js-btn-next" title="NEXT">NEXT
+										<i class="fa fa-arrow-right"></i>
+									</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<!-- step 11 -->
+				<div class="multisteps-form__panel" data-animation="slideHorz">
+					<div class="wizard-forms">
+						<div class="inner pb-100 clearfix">
+							<div class="form-content pera-content">
+								<div class="step-inner-content">
+									<span class="step-no bottom-line">Flow Check 11</span>
+									<div class="step-progress float-end">
+										<span>11 of 20 completed</span>
+										<div class="step-progress-bar">
+											<div class="progress">
+												<div class="progress-bar" style="width:55%"></div>
+											</div>
+										</div>
+									</div>
+									<h2>How many servings of vegetable did you have today?</h2>
+									<div class="services-select-option radio-group-11">
+										<ul>
+											<li class="bg-white active">
+												<label> None
+													<input type="radio" name="step-11" value="step-11-1" checked>
+												</label>
+											</li>
+
+											<li class="bg-white">
+												<label> 1 serving
+													<input type="radio" name="step-11" value="step-11-2">
+												</label>
+											</li>
+
+											<li class="bg-white">
+												<label> 2 servings
+													<input type="radio" name="step-11" value="step-11-3">
+												</label>
+											</li>
+
+											<li class="bg-white">
+												<label> 3 servings
+													<input type="radio" name="step-11" value="step-11-4">
+												</label>
+											</li>
+
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- ./inner -->
+						<div class="actions">
+							<ul>
+								<li>
+									<span class="js-btn-prev" title="BACK">
+										<i class="fa fa-arrow-left"></i> BACK
+									</span>
+								</li>
+								<li>
+									<span class="js-btn-next" title="NEXT">NEXT
+										<i class="fa fa-arrow-right"></i>
+									</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<!-- step 12 -->
+				<div class="multisteps-form__panel" data-animation="slideHorz">
+					<div class="wizard-forms">
+						<div class="inner pb-100 clearfix">
+							<div class="form-content pera-content">
+								<div class="step-inner-content">
+									<span class="step-no bottom-line">Flow Check 12</span>
+									<div class="step-progress float-end">
+										<span>12 of 20 completed</span>
+										<div class="step-progress-bar">
+											<div class="progress">
+												<div class="progress-bar" style="width:60%"></div>
+											</div>
+										</div>
+									</div>
+									<h2>How many cups of water did you have today?</h2>
+									<div class="services-select-option radio-group-12">
+										<ul>
+											<li class="bg-white active">
+												<label> Less than 2 Cups
+													<input type="radio" name="step-12" value="step-12-1" checked>
+												</label>
+											</li>
+
+											<li class="bg-white">
+												<label> 2-4 Cups
+													<input type="radio" name="step-12" value="step-12-2">
+												</label>
+											</li>
+
+											<li class="bg-white">
+												<label> 5-7 Cups
+													<input type="radio" name="step-12" value="step-12-3">
+												</label>
+											</li>
+
+											<li class="bg-white">
+												<label> 8-10 Cups
+													<input type="radio" name="step-12" value="step-12-4">
+												</label>
+											</li>
+
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- ./inner -->
+						<div class="actions">
+							<ul>
+								<li>
+									<span class="js-btn-prev" title="BACK">
+										<i class="fa fa-arrow-left"></i> BACK
+									</span>
+								</li>
+								<li>
+									<span class="js-btn-next" title="NEXT">NEXT
+										<i class="fa fa-arrow-right"></i>
+									</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<!-- step 13 -->
+				<div class="multisteps-form__panel" data-animation="slideHorz">
+					<div class="wizard-forms">
+						<div class="inner pb-100 clearfix">
+							<div class="form-content pera-content">
+								<div class="step-inner-content">
+									<span class="step-no bottom-line">Flow Check 13</span>
+									<div class="step-progress float-end">
+										<span>13 of 20 completed</span>
+										<div class="step-progress-bar">
+											<div class="progress">
+												<div class="progress-bar" style="width:65%"></div>
+											</div>
+										</div>
+									</div>
+									<h2>Did you intermittent fast today?</h2>
+									<div class="services-select-option radio-group-13">
+										<ul>
+											<li class="bg-white active">
+												<label> Yes
+													<input type="radio" name="step-13" value="step-13-1" checked>
+												</label>
+											</li>
+
+											<li class="bg-white">
+												<label> No
+													<input type="radio" name="step-13" value="step-13-2">
+												</label>
+											</li>
+
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- ./inner -->
+						<div class="actions">
+							<ul>
+								<li>
+									<span class="js-btn-prev" title="BACK">
+										<i class="fa fa-arrow-left"></i> BACK
+									</span>
+								</li>
+								<li>
+									<span class="js-btn-next" title="NEXT">NEXT
+										<i class="fa fa-arrow-right"></i>
+									</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<!-- step 14 -->
+				<div class="multisteps-form__panel" data-animation="slideHorz">
+					<div class="wizard-forms">
+						<div class="inner pb-100 clearfix">
+							<div class="form-content pera-content">
+								<div class="step-inner-content">
+									<span class="step-no bottom-line">Flow Check 14</span>
+									<div class="step-progress float-end">
+										<span>14 of 20 completed</span>
+										<div class="step-progress-bar">
+											<div class="progress">
+												<div class="progress-bar" style="width:70%"></div>
+											</div>
+										</div>
+									</div>
+									<h2>How many hours did you fast?</h2>
+									<div class="services-select-option radio-group-14">
+										<ul>
+											<li class="bg-white active">
+												<label> Less than 12 hours
+													<input type="radio" name="step-14" value="step-14-1" checked>
+												</label>
+											</li>
+
+											<li class="bg-white">
+												<label> 12 hours
+													<input type="radio" name="step-14" value="step-14-2">
+												</label>
+											</li>
+
+											<li class="bg-white">
+												<label> 13-14 hours
+													<input type="radio" name="step-14" value="step-14-3">
+												</label>
+											</li>
+
+											<li class="bg-white">
+												<label> 15+ hours
+													<input type="radio" name="step-14" value="step-14-4">
+												</label>
+											</li>
+
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- ./inner -->
+						<div class="actions">
+							<ul>
+								<li>
+									<span class="js-btn-prev" title="BACK">
+										<i class="fa fa-arrow-left"></i> BACK
+									</span>
+								</li>
+								<li>
+									<span class="js-btn-next" title="NEXT">NEXT
+										<i class="fa fa-arrow-right"></i>
+									</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<!-- step 15 -->
+				<div class="multisteps-form__panel" data-animation="slideHorz">
+					<div class="wizard-forms">
+						<div class="inner pb-100 clearfix">
+							<div class="form-content pera-content">
+								<div class="step-inner-content">
+									<span class="step-no bottom-line">Flow Check 15</span>
+									<div class="step-progress float-end">
+										<span>15 of 20 completed</span>
+										<div class="step-progress-bar">
+											<div class="progress">
+												<div class="progress-bar" style="width:75%"></div>
+											</div>
+										</div>
+									</div>
+									<h2>Did you have a bowel movement today?</h2>
+									<div class="services-select-option radio-group-15">
+										<ul>
+											<li class="bg-white active">
+												<label> Yes
+													<input type="radio" name="step-15" value="step-15-1" checked>
+												</label>
+											</li>
+
+											<li class="bg-white">
+												<label> No
+													<input type="radio" name="step-15" value="step-15-2">
+												</label>
+											</li>
+
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- ./inner -->
+						<div class="actions">
+							<ul>
+								<li>
+									<span class="js-btn-prev" title="BACK">
+										<i class="fa fa-arrow-left"></i> BACK
+									</span>
+								</li>
+								<li>
+									<span class="js-btn-next" title="NEXT">NEXT
+										<i class="fa fa-arrow-right"></i>
+									</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<!-- step 16 -->
+				<div class="multisteps-form__panel" data-animation="slideHorz">
+					<div class="wizard-forms">
+						<div class="inner pb-100 clearfix">
+							<div class="form-content pera-content">
+								<div class="step-inner-content">
+									<span class="step-no bottom-line">Flow Check 16</span>
+									<div class="step-progress float-end">
+										<span>16 of 20 completed</span>
+										<div class="step-progress-bar">
+											<div class="progress">
+												<div class="progress-bar" style="width:80%"></div>
+											</div>
+										</div>
+									</div>
+									<h2>How many hours of sleep did you get last night?</h2>
+									<div class="services-select-option radio-group-16">
+										<ul>
+											<li class="bg-white active">
+												<label> 2-4 hours
+													<input type="radio" name="step-16" value="step-16-1" checked>
+												</label>
+											</li>
+
+											<li class="bg-white">
+												<label> 5-6 hours
+													<input type="radio" name="step-16" value="step-16-2">
+												</label>
+											</li>
+
+											<li class="bg-white">
+												<label> 7-8 hours
+													<input type="radio" name="step-16" value="step-16-3">
+												</label>
+											</li>
+
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- ./inner -->
+						<div class="actions">
+							<ul>
+								<li>
+									<span class="js-btn-prev" title="BACK">
+										<i class="fa fa-arrow-left"></i> BACK
+									</span>
+								</li>
+								<li>
+									<span class="js-btn-next" title="NEXT">NEXT
+										<i class="fa fa-arrow-right"></i>
+									</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<!-- step 17 -->
+				<div class="multisteps-form__panel" data-animation="slideHorz">
+					<div class="wizard-forms">
+						<div class="inner pb-100 clearfix">
+							<div class="form-content pera-content">
+								<div class="step-inner-content">
+									<span class="step-no bottom-line">Flow Check 17</span>
+									<div class="step-progress float-end">
+										<span>17 of 20 completed</span>
+										<div class="step-progress-bar">
+											<div class="progress">
+												<div class="progress-bar" style="width:85%"></div>
+											</div>
+										</div>
+									</div>
+									<h2>Did you feel energized when you woke up?</h2>
+									<div class="services-select-option radio-group-17">
+										<ul>
+											<li class="bg-white active">
+												<label> Yes
+													<input type="radio" name="step-17" value="step-17-1" checked>
+												</label>
+											</li>
+
+											<li class="bg-white">
+												<label> No
+													<input type="radio" name="step-17" value="step-17-2">
+												</label>
+											</li>
+
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- ./inner -->
+						<div class="actions">
+							<ul>
+								<li>
+									<span class="js-btn-prev" title="BACK">
+										<i class="fa fa-arrow-left"></i> BACK
+									</span>
+								</li>
+								<li>
+									<span class="js-btn-next" title="NEXT">NEXT
+										<i class="fa fa-arrow-right"></i>
+									</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<!-- step 18 -->
+				<div class="multisteps-form__panel" data-animation="slideHorz">
+					<div class="wizard-forms">
+						<div class="inner pb-100 clearfix">
+							<div class="form-content pera-content">
+								<div class="step-inner-content">
+									<span class="step-no bottom-line">Flow Check 18</span>
+									<div class="step-progress float-end">
+										<span>18 of 20 completed</span>
+										<div class="step-progress-bar">
+											<div class="progress">
+												<div class="progress-bar" style="width:90%"></div>
+											</div>
+										</div>
+									</div>
+									<h2>Did you have any prolonged moments of stress, anger, or anxiety (more than 3
+										hours)?</h2>
+									<div class="services-select-option radio-group-18">
+										<ul>
+											<li class="bg-white active">
+												<label> Yes
+													<input type="radio" name="step-18" value="step-18-1" checked>
+												</label>
+											</li>
+
+											<li class="bg-white">
+												<label> No
+													<input type="radio" name="step-18" value="step-18-2">
+												</label>
+											</li>
+
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- ./inner -->
+						<div class="actions">
+							<ul>
+								<li>
+									<span class="js-btn-prev" title="BACK">
+										<i class="fa fa-arrow-left"></i> BACK
+									</span>
+								</li>
+								<li>
+									<span class="js-btn-next" title="NEXT">NEXT
+										<i class="fa fa-arrow-right"></i>
+									</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<!-- step 19 -->
+				<div class="multisteps-form__panel" data-animation="slideHorz">
+					<div class="wizard-forms">
+						<div class="inner pb-100 clearfix">
+							<div class="form-content pera-content">
+								<div class="step-inner-content">
+									<span class="step-no bottom-line">Flow Check 19</span>
+									<div class="step-progress float-end">
+										<span>19 of 20 completed</span>
+										<div class="step-progress-bar">
+											<div class="progress">
+												<div class="progress-bar" style="width:95%"></div>
+											</div>
+										</div>
+									</div>
+									<h2>Do you feel like you're in a good mood today?</h2>
+									<div class="services-select-option radio-group-19">
+										<ul>
+											<li class="bg-white active">
+												<label> Yes
+													<input type="radio" name="step-19" value="step-19-1" checked>
+												</label>
+											</li>
+
+											<li class="bg-white">
+												<label> No
+													<input type="radio" name="step-19" value="step-19-2">
+												</label>
+											</li>
+
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- ./inner -->
+						<div class="actions">
+							<ul>
+								<li>
+									<span class="js-btn-prev" title="BACK">
+										<i class="fa fa-arrow-left"></i> BACK
+									</span>
+								</li>
+								<li>
+									<span class="js-btn-next" title="NEXT">NEXT
+										<i class="fa fa-arrow-right"></i>
+									</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<!-- step 20 -->
+				<div class="multisteps-form__panel" data-animation="slideHorz">
+					<div class="wizard-forms">
+						<div class="inner pb-100 clearfix">
+							<div class="form-content pera-content">
+								<div class="step-inner-content">
+									<span class="step-no bottom-line">Flow Check 20</span>
+									<div class="step-progress float-end">
+										<span>20 of 20 completed</span>
+										<div class="step-progress-bar">
+											<div class="progress">
+												<div class="progress-bar" style="width:100%"></div>
+											</div>
+										</div>
+									</div>
+									<h2>Do you want to do a mood/stress check in today?</h2>
+									<div class="services-select-option radio-group-20">
+										<ul>
+											<li class="bg-white active">
+												<label> Yes
+													<input type="radio" name="step-20" value="step-20-1" checked>
+												</label>
+											</li>
+
+											<li class="bg-white">
+												<label> No
+													<input type="radio" name="step-20" value="step-20-2">
+												</label>
+											</li>
+
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- ./inner -->
+						<div class="actions">
+							<ul>
+								<li>
+									<span class="js-btn-prev" title="BACK">
+										<i class="fa fa-arrow-left"></i> BACK
+									</span>
+								</li>
+								<li>
+									<span class="js-btn-next" title="NEXT">Score?
+										<i class="fa fa-arrow-right"></i>
+									</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+
+	<!-- //////////////////////////////////////////////////// ===================================== //////////////////////////////////////////////// -->
+
+	<!-- First Pop-up Modal -->
+	<div class="mymodal" id="first-mymodal">
+		<div class="mymodal-content">
+			<h1>
+				Tips to stay in the FLOW ZONE.
+			</h1>
+			<ol>
+				<li id="first-modal-msg1">
+				</li>
+				<li id="first-modal-msg2">
+				</li>
+			</ol>
+			<button type="button" autofocus onclick="firstModalClose()">OK</button>
+		</div>
+	</div>
+
+	<!-- Last Pop-up Modal -->
+	<div class="mymodal" id="last-mymodal">
+		<div class="mymodal-content">
+			<h1>
+				Well Done!
+			</h1>
+			<h2 style="line-height: 80px;">
+				Score: <span id="score_in_modal">92.7</span>
+			</h2>
+			<p>
+				Well done, <span id="last-mymodal-name">Name</span>.<br>
+				<span id="last-comment">Congratulations! Respect!! You're in the flow zone.</span><br>
+				<br>
+				Would you like to save your result to the server?
+			</p>
+			<div class="row" style="margin: 30px 10px;">
+				<div class="col-md-6">
+					<button type="button" onclick="lastModalClose()">No, Don't Save</button>
+				</div>
+				<div class="col-md-6">
+					<button type="button" autofocus onclick="PostToServerAndModalClose()">Save My Score</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Alert Modal -->
+	<div class="mymodal" id="alert-mymodal">
+		<div class="mymodal-content">
+			<p>
+				This is alert!
+			</p>
+			<button type="button" autofocus onclick="alertModalClose()">OK</button>
+		</div>
+	</div>
+
+	<!-- Complete Pop-up Modal -->
+
+	<script src="assets/js/jquery-3.3.1.min.js"></script>
+	<script src="assets/js/jquery.validate.min.js"></script>
+	<!-- <script
+		src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script> -->
+	<script src="assets/js/bootstrap-datepicker.min.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/conditionize.flexible.jquery.min.js"></script>
+	<script src="assets/js/index.js"></script>
+	<script src="assets/js/switch.js"></script>
+	<script>
+		$(document).ready(function () {
+			$('.conditional').conditionize();
+		});
+	</script>
+</body>
+
+</html>

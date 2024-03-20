@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>History View</title>
+    <!-- add icon link -->
+    <link rel="icon" href="./assets/img/icon/icon.png" type="image/x-icon">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="The Flow Zone Tracker, COACH JYIMA, CERTIFIED PERSONAL TRAINER/HOLISTIC HEALTH COACH" />
+    <meta name="keywords"
+        content="Coach, Jyima, certified, personal trainer, holistic coach, health coach, flow zone tracker, daily check in" />
+    <meta name="author" content="JYIMA" />
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="./assets/css/history.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo-container">
+            <img src="./assets/img/logo/logo.png" alt="Logo" class="logo" id="logo">
+        </div>
+        <button class="close-button" id="close-button">X</button>
+    </nav>
+    <div id="app-history">
+        <table id="table-history">
+            <thead>
+                <tr>
+                    <td style="padding: 0">
+                        <input type="text" id="name-input" placeholder="Input Name."
+                            style="width: 100%; padding: 8px; padding-left: 1rem;" />
+                    </td>
+                    <td colspan="3" id="input-right"></td>
+                </tr>
+            </thead>
+            <thead>
+                <tr>
+                    <th class="col-name">Name</th>
+                    <th class="col-age">Age</th>
+                    <th class="col-date">Date</th>
+                    <th class="col-finalscore">Score</th>
+                </tr>
+            </thead>
+            <tbody id="history-body">
+                <tr>
+                    <td class="col-name">Roman</td>
+                    <td class="col-age">22</td>
+                    <td class="col-date">7/4/2022</td>
+                    <td class="col-finalscore">79.3</td>
+                </tr>
+                <tr>
+                    <td class="col-name">Valre</td>
+                    <td class="col-age">80</td>
+                    <td class="col-date">7/3/2022</td>
+                    <td class="col-finalscore">29.3</td>
+                </tr>
+            </tbody>
+        </table>
+        <div id="div-button">
+            <input type="button" id="load-more" value="Load More" />
+        </div>
+    </div>
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script src="assets/js/jquery.validate.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/conditionize.flexible.jquery.min.js"></script>
+    <script src="./assets/js/history.js"> </script>
+</body>
+
+</html>

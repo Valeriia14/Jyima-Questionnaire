@@ -1,0 +1,274 @@
+:root {
+    --lime_: rgb(177, 201, 0);
+    --lime_bright: rgb(230, 255, 44);
+    --lime_weak: rgb(244, 255, 169);
+    --lime__: rgba(213, 242, 8, 1);
+    --black_: black;
+    --black_secondary: #222;
+    --gray_: gray;
+    --gray_border: rgb(210, 210, 210);
+    --bd-warning_: rgb(209, 54, 54);
+    --circle-chart-size_1: 350px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: #555;
+}
+
+.wrapper {
+    margin: 0 auto;
+}
+
+.heading {
+    margin: 4rem;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+}
+
+.heading p {
+    font-size: 3.5rem;
+}
+
+.heading div .display-inline {
+    display: inline;
+}
+
+.heading>div p:nth-child(2) {
+    line-height: 2;
+}
+
+.heading .bg--lime_ {
+    background-color: var(--lime__);
+}
+
+.main-content {
+    display: flex;
+    flex-direction: row;
+    margin: 0 4rem 3rem 4rem;
+}
+
+.sub-content {
+    flex: 1 1 auto;
+    flex-basis: 100%;
+}
+
+.sub-content>div {
+    margin-bottom: 40px;
+}
+
+.sub-content-head {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.sub-content-cont {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.circlechart {
+    padding: 20px 50px;
+}
+
+.sub-middle, .sub-right {
+    text-align: center;
+}
+
+.sub-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sub-left, .sub-right {
+    padding-top: 60px;
+}
+
+.sub-middle-day-date {
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+
+.today-progress-circle .circle-chart {
+    --circle-chart-size: min(var(--circle-chart-size_1), 65vw);
+    width: var(--circle-chart-size);
+    height: var(--circle-chart-size);
+    background-color: var(--lime__);
+    border-radius: calc((var(--circle-chart-size) + 1px) / 2);
+}
+
+.circle-chart__background {
+    stroke: var(--lime_weak) !important;
+}
+
+.success-stroke {
+    stroke: rgb(204, 112, 216) !important;
+}
+
+.circle-chart__percent {
+    font-weight: 600 !important;
+}
+
+.week-day-info {
+    background-color: var(--lime__);
+}
+
+#week-ending {
+    background-color: gray;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 2;
+    color: var(--lime_bright);
+}
+
+#current-weak-history {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 12px;
+}
+
+#current-weak-history p {
+    margin-bottom: 5px;
+}
+
+.button-to-history {
+    background-color: var(--lime_);
+}
+
+#button-to-history {
+    margin-bottom: 70px;
+}
+
+.button-to-history p {
+    font-size: 1.5rem;
+    line-height: 2;
+    font-weight: 500;
+    display: inline;
+    cursor: pointer;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    height: 60px;
+    width: 100%;
+    background-color: var(--lime_);
+    text-align: center;
+}
+
+.footer a {
+    font-size: 20px;
+    line-height: 55px;
+}
+
+@media screen and (max-width: 1400px) {
+    .heading p {
+        font-size: 3.2rem;
+    }
+
+    .main-content {
+        margin: 0 3rem 2rem 3rem;
+    }
+
+    .sub-content-head {
+        font-size: 2.2rem;
+    }
+
+    .sub-content-cont {
+        font-size: 1.2rem;
+    }
+
+    #week-ending {
+        font-size: 1.7rem;
+    }
+}
+
+@media screen and (max-width: 1190px) {
+
+    .heading {
+        margin: 3rem;
+    }
+
+    .heading div .display-inline {
+        display: block;
+    }
+
+    .sub-left {
+        order: 2;
+    }
+
+    .sub-middle {
+        order: 1;
+    }
+
+    .sub-right {
+        order: 3;
+    }
+
+    .heading>div p:nth-child(1) {
+        margin: 0;
+        line-height: initial;
+    }
+
+    .heading>div p:nth-child(2) {
+        line-height: initial;
+    }
+
+    .main-content {
+        flex-direction: column;
+    }
+
+    .heading p {
+        font-size: 3.6rem;
+    }
+
+    .main-content {
+        margin: 0 10vw 2rem 10vw;
+    }
+
+    .sub-content-head {
+        font-size: 2.6rem;
+    }
+
+    .sub-content-cont {
+        font-size: 1.6rem;
+    }
+
+    #week-ending {
+        font-size: 2.1rem;
+    }
+}
+
+@media screen and (max-width: 776px) {
+    .heading p, .sub-middle-day-date {
+        font-size: min(7vw, 3rem);
+    }
+
+    .circlechart {
+        padding: 0 24px;
+    }
+
+    .sub-content-head {
+        font-size: 2rem;
+    }
+
+    .sub-content-cont {
+        font-size: 1.2rem;
+    }
+
+    #week-ending {
+        font-size: 1.7rem;
+    }
+
+}
+
+@media screen and (max-width: 443px) {
+    .button-to-history p {
+        display: block;
+        line-height: initial;
+        margin: 0;
+    }
+}
