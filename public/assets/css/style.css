@@ -1238,7 +1238,7 @@ select.form-control option[value=""][disabled] {
 
 .sidebar-inner p {
   padding: 0 10% 20px 10%;
-  text-align: justify;
+  /* text-align: justify; */
   font-size: 26px;
   font-weight: 500;
   font-family: Arial, Helvetica, sans-serif;
